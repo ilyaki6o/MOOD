@@ -1,0 +1,23 @@
+[project]
+name = "mood"
+version = "1.0.0"
+description = "A simple multiplayer console game"
+
+dependencies = [
+    "python-cowsay",
+]
+
+authors = [
+    {name = "Goncharov Ilya", email = "ilgoncharov137@gmail.com"},
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-dir]
+mood = "mood"
+
+[project.scripts]
+start_server = "mood.server.__main__:server"
+start_client = "mood.client.__main__:client"
